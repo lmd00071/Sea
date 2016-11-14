@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="goldHistoryCell" rowHeight="55" id="KGk-i7-Jjw" customClass="BWGoldHistoryCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="55"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="54.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="account_history_gold" translatesAutoresizingMaskIntoConstraints="NO" id="FM9-h0-rm8">
+                        <rect key="frame" x="5" y="5" width="44" height="44"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="FM9-h0-rm8" secondAttribute="height" multiplier="1:1" id="lta-aX-bqi"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0p8-YG-FmD">
+                        <rect key="frame" x="59" y="30" width="33" height="16"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nxw-rW-Jqk">
+                        <rect key="frame" x="59" y="8" width="38" height="18"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F5d-E6-gUz">
+                        <rect key="frame" x="0.0" y="53" width="320" height="1"/>
+                        <color key="backgroundColor" white="0.5" alpha="0.29999999999999999" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="GOm-Y6-SHX"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="F5d-E6-gUz" secondAttribute="trailing" id="1wO-1o-9kE"/>
+                    <constraint firstAttribute="bottom" secondItem="F5d-E6-gUz" secondAttribute="bottom" id="Cl9-mB-wrd"/>
+                    <constraint firstItem="FM9-h0-rm8" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="Gz4-Cn-sVk"/>
+                    <constraint firstItem="0p8-YG-FmD" firstAttribute="leading" secondItem="FM9-h0-rm8" secondAttribute="trailing" constant="10" id="ISX-Zv-Dpd"/>
+                    <constraint firstAttribute="bottom" secondItem="FM9-h0-rm8" secondAttribute="bottom" constant="5" id="RJz-BC-uUp"/>
+                    <constraint firstItem="0p8-YG-FmD" firstAttribute="leading" secondItem="Nxw-rW-Jqk" secondAttribute="leading" id="UiI-fz-kjx"/>
+                    <constraint firstItem="0p8-YG-FmD" firstAttribute="bottom" secondItem="FM9-h0-rm8" secondAttribute="bottom" constant="-3" id="Yqe-Ge-uEs"/>
+                    <constraint firstItem="FM9-h0-rm8" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="mDG-x2-0xp"/>
+                    <constraint firstItem="Nxw-rW-Jqk" firstAttribute="top" secondItem="FM9-h0-rm8" secondAttribute="top" constant="3" id="nZs-RL-az5"/>
+                    <constraint firstItem="F5d-E6-gUz" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="spC-vj-4Qf"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="getWayLabel" destination="Nxw-rW-Jqk" id="kcq-5o-U7f"/>
+                <outlet property="iconImageView" destination="FM9-h0-rm8" id="BL0-x1-knn"/>
+                <outlet property="totalAndTimeLabel" destination="0p8-YG-FmD" id="QDe-kX-sEt"/>
+            </connections>
+            <point key="canvasLocation" x="259" y="254.5"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="account_history_gold" width="114" height="114"/>
+    </resources>
+</document>

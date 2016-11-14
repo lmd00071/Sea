@@ -1,0 +1,69 @@
+//
+//  PrefixHeader.pch
+//  SeaSwallowClassRoom
+//
+//  Created by 李明丹 on 16/5/18.
+//  Copyright © 2016年 李明丹. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+//项目名称
+
+//终端唯一标识符
+#define APP_ID @"wxf120b5260432545"                                  //APPID
+#define APP_SECRET @"998d17563f0d6d0181b90ff543656ygrs"              //appsecret
+#define MCH_ID @"1269999401"                                        //商户号
+#define PARTNER_ID @"xbM5MBCVOj2sEAs8KrMfwla4djpcQKuvG9" 
+//商户API密钥
+#define AppUUID [[UIDevice currentDevice] uuid]
+
+#define DBPath [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES).firstObject stringByAppendingPathComponent:@"YoungWan.db"]
+
+//导入常用分类
+#import "UIView+Frame.h"
+#import "NSString+CSVDictionary.h"
+#import "NSDictionary+Additions.h"
+#import "NSDate+BWExtension.h"
+
+#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
+
+//导入全局静态变量
+#import "BWConst.h"
+
+//导入常用第三方框架
+#import "FMDB.h"
+#import "FMResultSet.h"
+#import "XMLDictionary.h"
+#import "SVProgressHUD.h"
+#import "MBProgressHUD.h"
+#import "MJExtension.h"
+#import <UIDevice+FCUUID.h>
+
+//导入常用工具类
+#import "LoginUserManager.h"
+#import "loginOrReginModel.h"
+#import "BWHttpRequestManager.h"
+#import "BWUserMessageManager.h"
+#import "BWCSVModel.h"
+#import "BWCSVDatabase.h"
+
+//打印内容
+#ifdef DEBUG
+#define  NSLog(__VA_ARGS__)
+#else
+#define NSLog(...)
+#endif
+
+//自定义颜色
+#define HBRGBColor(r, g, b,a) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:(a)]
+#define HBConstColor HBRGBColor(26, 199, 114,1)
+//#define BWConstColor BWRGBColor(66, 169, 234)
+//屏幕的宽和高
+#define HBScreenWidth [UIScreen mainScreen].bounds.size.width
+#define HBScreenHeight [UIScreen mainScreen].bounds.size.height
+
+
+#endif /* PrefixHeader_pch */
